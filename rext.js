@@ -235,9 +235,117 @@
 // console.log(a);
 // console.log(b);
 
-console.log("hello");
-setTimeout(function()  {
-    console.log("hello2");
-}, 2000);
 
-console.log("hello3");
+// console.log("hello");
+// setTimeout(function()  {
+//     console.log("hello2");
+// }, 2000);
+// console.log("hello3");
+
+//Callback function
+// function greet(name,callback,callback2){
+//     console.log("hello",name);
+//     callback();
+//     callback2();
+// }
+// function saybye(){
+//     console.log("goodbye");
+// }
+// function saythanks(){
+//     console.log("thank you");
+// }
+// greet("john",saybye,saythanks);
+
+
+//by using simple function
+// function greet(name){
+//     console.log("hello",name);
+//     saybye();
+//     saythanks();
+// }
+// function saybye(){
+//     console.log("goodbye");
+// }
+// function saythanks(){
+//     console.log("thank you");
+// }
+// greet("john");
+
+
+//practical 2
+// function check(callback){
+//     setTimeout(() => {
+//         console.log("USER IG LOGGING IN")
+//         callback()
+//     }, 5000);
+// }
+
+// function verify(callback){
+//     setTimeout(() => {
+//         console.log("USER VERIFY CART")
+//         callback()
+//     }, 5000);
+// }
+
+// function payment(callback){
+//     setTimeout(() => {
+//         console.log("PAYMENT DONE")
+//         callback()
+//     }, 5000);
+// }
+
+// function order(callback){
+//     setTimeout(() => {
+//         console.log("ORDER PLACED")
+//         callback()
+//     }, 5000);
+// }
+
+// check(() => {
+//     verify(() => {
+//         payment(() => {
+//             order(() =>{
+//                 console.log('ALL TASK DONE')
+//             })
+//         })
+//     })
+// })
+
+
+//practical 1
+// a 
+// const sum = (...num) => {
+//     let ans = 0
+//     num.forEach(n=>{
+//         ans+=n
+//     });
+//     console.log(ans)
+// };
+// sum(1,2,3,4,5,6,7,8)
+
+// // b
+// oldarray = [1,2,3,4,5]
+// newarray = [...oldarray,"Ram", "Shyam", 6,7,8,9]
+// console.log(newarray)
+
+// // c 
+// const student = {
+//     name: "ram",
+//     age: 20,
+//     city: "ghaziabad"
+// };
+
+// const copy = {...student};
+// console.log(copy)
+
+// const updated = {
+//     ...student,
+//     age: 21
+// };
+
+// console.log(updated)
+
+// // d 
+// const add = (a,b,c) => a+b+c
+// const arr = [10,20,30]
+// console.log(add(...arr))
