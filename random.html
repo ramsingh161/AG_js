@@ -9,17 +9,23 @@
 </head>
 <body>
     <h1>welcome to class</h1>
+    <button onclick="change()">Change Text</button>
     <script>
-       const a=function() {
-            console.log("inside a");
-       }
-       setTimeout(function() {
-            console.log("inside timeout");
-       }, 5000);
-       const change=function() {
-       const a=document.querySelector("h1").innerText="welcome to class - changed by script";
-       }
-       setTimeout(change, 3000);
+    //    const a=function() {
+    //         console.log("inside a");
+    //    }
+    //    setTimeout(function() {
+    //         console.log("inside timeout");
+    //    }, 5000);
+    //    const change=function() {
+    //    const a=document.querySelector("h1").innerText="welcome to class - changed by script";
+    //    }
+    //    setTimeout(change, 3000);
+
+             function change() {
+            document.querySelector("h1").innerText =
+                "welcome to class - changed by script";
+        }
     </script>
 
     <h2>
@@ -27,3 +33,5 @@
     </h2>
 </body>
 </html>
+
+

@@ -349,3 +349,62 @@
 // const add = (a,b,c) => a+b+c
 // const arr = [10,20,30]
 // console.log(add(...arr))
+
+
+//promise
+// const promise = new Promise(function(resolve,reject){
+//     setTimeout(() => {
+//         console.log("doing async task");
+//         resolve();
+//     }, 2000);
+
+// })
+// promise.then(function(){
+//     console.log("promise executed");
+// })
+//method 2
+// new Promise(function(resolve,reject){
+//     setTimeout(() => {
+//         console.log("doing async task");
+//         resolve();
+//     }, 2000);
+
+// }).then(function(){
+//     console.log("promise executed");
+// })
+
+
+// const promise = new Promise(function(resolve,reject){
+//     setTimeout(() => {
+//         console.log("doing async task");
+//         resolve({username:"john",id:111});
+//     }, 2000);
+// })
+// promise.then(function(u1){
+//     console.log(u1)
+//     return u1.username;
+// }).then((username)=>{
+//     console.log(username);
+// })
+
+
+//error handling using promise
+const promise = new Promise(function(resolve,reject){
+    let error = true;
+    if(error){
+        resolve({username:"john",id:111});
+    }
+    else{
+        reject("something went wrong");
+    }
+})
+promise.then(function(u1){
+    console.log(u1)
+    return u1.username;
+}).then((username)=>{
+    console.log(username);
+}).catch(function(error){
+    console.log(error);
+}).finally(()=>{
+    console.log("promise went through");
+});
