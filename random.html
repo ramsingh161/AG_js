@@ -4,10 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="rext.js"></script>
+    <!-- <script src="rext.js"></script> -->
 
 </head>
 <body>
-    
+    <h1>welcome to class</h1>
+    <script>
+       const a=function() {
+            console.log("inside a");
+       }
+       setTimeout(function() {
+            console.log("inside timeout");
+       }, 5000);
+       const change=function() {
+       const a=document.querySelector("h1").innerText="welcome to class - changed by script";
+       }
+       setTimeout(change, 3000);
+    </script>
+
+    <h2>
+        some text
+    </h2>
 </body>
 </html>
