@@ -389,22 +389,69 @@
 
 
 //error handling using promise
+// const promise = new Promise(function(resolve,reject){
+//     let error = true;
+//     if(error){
+//         resolve({username:"john",id:111});
+//     }
+//     else{
+//         reject("something went wrong");
+//     }
+// })
+// promise.then(function(u1){
+//     console.log(u1)
+//     return u1.username;
+// }).then((username)=>{
+//     console.log(username);
+// }).catch(function(error){
+//     console.log(error);
+// }).finally(()=>{
+//     console.log("promise went through");
+// });
+
+
+//usning aync await
+// const promise1 = new Promise(function(resolve,reject){
+//     setTimeout(() => {
+//         let error = true;
+//         if(error){
+//             resolve({username:"john",id:111});
+//         }
+//         else{
+//             reject("something went wrong");
+//         }
+//     }, 2000);
+// })
+// async function consumePromise1(){
+//     try{ 
+//         const response = await promise1;
+//         console.log(response);
+//     } catch(error){
+//         console.log(error);
+//     }
+// }
+// consumePromise1();
+
+
+//pratical 3
 const promise = new Promise(function(resolve,reject){
-    let error = true;
-    if(error){
-        resolve({username:"john",id:111});
-    }
-    else{
-        reject("something went wrong");
-    }
+    setTimeout(() => {
+        let error = false;
+        if(!error){
+            resolve({username:"john",id:111});
+        }
+        else{
+            reject("something went wrong");
+        }
+    }, 2000);
 })
-promise.then(function(u1){
-    console.log(u1)
-    return u1.username;
-}).then((username)=>{
-    console.log(username);
-}).catch(function(error){
-    console.log(error);
-}).finally(()=>{
-    console.log("promise went through");
-});
+promise
+    .then((successMessage) => {
+        console.log(successMessage);
+    })
+    .catch((errorMessage) => {
+        console.log(errorMessage);
+    });
+
+
+
