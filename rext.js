@@ -434,24 +434,43 @@
 
 
 //pratical 3
-const promise = new Promise(function(resolve,reject){
-    setTimeout(() => {
-        let error = false;
-        if(!error){
-            resolve({username:"john",id:111});
-        }
-        else{
-            reject("something went wrong");
-        }
-    }, 2000);
-})
-promise
-    .then((successMessage) => {
-        console.log(successMessage);
-    })
-    .catch((errorMessage) => {
-        console.log(errorMessage);
-    });
+// const promise = new Promise(function(resolve,reject){
+//     setTimeout(() => {
+//         let error = false;
+//         if(!error){
+//             resolve({username:"john",id:111});
+//         }
+//         else{
+//             reject("something went wrong");
+//         }
+//     }, 2000);
+// })
+// promise
+//     .then((successMessage) => {
+//         console.log(successMessage);
+//     })
+//     .catch((errorMessage) => {
+//         console.log(errorMessage);
+//     });
 
+
+
+n = int(input().strip())
+arr = list(map(int, input().split()))
+
+if len(arr) != n:
+    print(-1)
+else:
+    max_val = max(arr)
+    count = [0] * (max_val + 1)
+
+    for num in arr:
+        count[num] += 1
+
+    result = []
+    for i in range(len(count)):
+        result.extend([i] * count[i])
+
+    print(' '.join(map(str, result)))
 
 
