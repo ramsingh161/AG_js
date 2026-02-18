@@ -1,3 +1,5 @@
+import 'dart:io'; // for imput and output from user
+
 void main() {
   // print("hello");
   // var a="jello";
@@ -31,7 +33,52 @@ void main() {
   // string b = null;  //this gives an error because string data type cannot have null value
   // print(b);
 
-  String? name;
-  print(name.toString());
-  print(name.hashCode);
+  // String? name;
+  // print(name.toString());
+  // print(name.hashCode);
+
+  //late variable is a variable that is initialized later
+  // late String name;
+  // name = "hello";
+  // print(name);
+
+  // final will work on runtime and const will work on compile time
+  // final time = DateTime.now();
+  // print(time);
+
+  // final list= [1, 2, 3, 4];
+  // list.add(6);
+  // print(list);
+
+  // var hex = 0xABCDF;
+  // print(hex.runtimeType);
+  // print(hex);
+
+  // var v = 1.1;
+  // double v1 = 1.32e5;
+  // print(v.runtimeType);
+  // print(v1);
+  // print(v1.runtimeType);
+
+  // var one = int.parse('1');
+  // assert(one == 1);//asert only shows a message when the condition is false,
+
+  //strint to double
+  // var one = double.parse('1.1');
+  // assert(one == 1.1);
+
+  //integer to string
+  // var one = 1.toString();
+  // assert(one == '1');
+
+  // String fname = "John";
+  // String lname = "doe";
+  // print("$fname $lname");
+
+  print("first number");
+  double num1 = double.parse(stdin.readLineSync()!);
+  print("second number");
+  double num2 = double.parse(stdin.readLineSync()!);
+  double sum = num1 + num2;
+  print(sum);
 }
